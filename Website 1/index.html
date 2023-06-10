@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parallax Scrolling Website | Vanilla Javascript</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/js" href="script.js">
+        <script src="https://kit.fontawesome.com/d088e2ce93.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><span>EVIX</span></a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="mailto:greenteamer3.5@gmail.com">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="Stars.png" id="stars">
+            <img src="Moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Subscribe!!</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>About me</h2>
+            <p> Hello! im Evix, a minecraft thumbnail designer, editor, and small content creator with some experience, each thumbnail i make costs up to 
+                £5 and are well made. for more information, please DM me on discord: Evix#0554
+            </p>
+            <div class="wrapper">
+             <div class="icon youtube">
+             <div class="tooltip">Youtube</div>
+             <span><i class="fa-brands fa-youtube"></i></span>
+            </div>
+            <div class="icon discord">
+                <div class="tooltip">Discord</div>
+                <span><i class="fa-brands fa-discord"></i></span>
+            </div>
+            <div class="icon fiverr">
+                <div class="tooltip">Fiverr</div>
+                <span><i class="fa-solid fa-cart-shopping"></i></span>
+            </div>
+             <div class="iframe">
+            <right><iframe width="280" height="157.5" src="https://www.youtube.com/embed/7BNqdzBiPFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></right>
+             </div>
+
+             <div class="content">
+                <h1>Latest video</Var></h1>
+    
+
+             </div>
+        <script>
+            let stars = document.getElementById('stars')
+            let moon = document.getElementById('moon')
+            let mountains_behind = document.getElementById('mountains_behind')
+            let text = document.getElementById('text')
+            let btn = document.getElementById('btn')
+            let mountains_front = document.getElementById('mountains_front')
+            let header = document.querySelector('header')
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.marginTop = value * 0.5 + 'px';
+              })
+        </script>     
+    </body>
+</html>
